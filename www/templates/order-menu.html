@@ -1,0 +1,35 @@
+
+
+<ion-view view-title="Menu" hide-back-button="false" >
+	<ion-content class="order-menu-back" scroll="false">
+	  	<div class="row order-menu-tabs">
+	  		<div class="col col-100 order-menu-tab" ng-repeat="group in foods track by $index" ng-click="onTabSelChanged($index)">
+	  			<button class="button button-clear button-assertive" style="width:100%; height:100%" ng-class="{active: $index!=sel_dish_type}">{{group.title}}</button>
+	  		</div>
+	  	</div>
+	  		
+	  	<div class="order-menu-content">
+	  		<div class="list" ng-repeat="group in foods track by $index" ng-show="$index===sel_dish_type">
+	  			<div ng-repeat="dish in group.dishes track by $index" >
+					<div class="item order-menu-item-dish" ng-class="{active: isDishShown(dish)}">
+						<i class="cion ion-minus-circled assertive" ng-show="getOrderedCount($parent.$index, $index)>0" style="font-size:1.5em;" ng-click="orderedDishes[$parent.$index][$index]=0"></i>
+						<a ng-click="toggleDish(dish)" class="positive">&nbsp;{{dish.name}}</a>
+						<span class="item-note">
+							<button ng-click="onClickMin($parent.$index,$index)" ng-class="getButtonMin($parent.$index,$index)">
+								<i class="icon ion-chevron-left"></i>
+							</button>
+							{{orderedDishes[$parent.$index][$index]}}
+							<button ng-click="onClickPlus($parent.$index,$index)" class="button button-small button-clear button-positive" style="border-color: #ffffff!important;background-color: #ffffff!important;color: #dddddd!important;">
+								<i class="icon ion-chevron-right"></i>
+							</button>
+							${{dish.price.toFixed(0)}}
+						</span>
+
+					</div>
+					<div class="item item-accordion" ng-show="isDishShown(dish)">{{dish.description}}</div>
+				</div>
+		    </div>
+		 </div>
+		<a ng-click="confirmOrder()" class="button button-assertive button-block order-menu-btn-next">Confirmar</a>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,95 @@
+
+
+<ion-view view-title="Reserva Fecha" hide-back-button="false" >
+	<ion-content class="order-prepare-back" scroll="false">
+		<div class="order-prepare-top" scroll="true">
+			<div class="list order-prepare-type">
+				<label class="item item-radio" ng-click="onTapItem(0)">
+					<input type="radio" name="group" ng-checked="orderType == 0">
+					<div class="item-content">Reserva Fecha</div>
+					<i class="radio-icon ion-checkmark-circled balanced"></i>
+				</label>
+				<!-- <label class="item item-radio" ng-click="onTapItem(1)">
+					<input type="radio" name="group" ng-checked="orderType == 1">
+					<div class="item-content">Take away</div>
+					<i class="radio-icon ion-checkmark-circled balanced"></i>
+				</label> -->
+				<!-- <label class="item item-radio" ng-click="onTapItem(2)">
+					<input type="radio" name="group" ng-checked="orderType == 2">
+					<div class="item-content">Join table</div>
+					<i class="radio-icon ion-checkmark-circled balanced"></i>
+				</label> -->
+			</div>
+
+			<div class="order-prepare-date-time-num">
+				<div class="order-prepare-date">
+					Fecha
+					<div class="row order-prepare-date-content">
+						<div class="col">
+							<select ng-model="selectedMonth">
+								<option ng-repeat="month in months">{{month}}</option>
+							</select>
+						</div>
+						<div class="col">
+							<select ng-model="selectedDay">
+								<option ng-repeat="day in days track by $index">{{$index+1}}</option>
+							</select>
+						</div>
+						<div class="col">
+							<select ng-model="selectedYear">
+								<option ng-repeat="year in years">{{year}}</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<div class="order-prepare-time">
+					Hora
+					<div class="row order-prepare-time-content">
+						<div class="col">
+							<select ng-model="selectedHour">
+								<option ng-repeat="hour in hours track by $index">{{$index + 1}}</option>
+							</select>
+						</div>
+						:
+						<div class="col">
+							<select ng-model="selectedMin">
+								<option ng-repeat="min in mins track by $index">{{("0" + $index*10).slice(-2)}}</option>
+							</select>
+						</div>
+						<div class="col">
+							<select ng-model="selectedHalf">
+								<option ng-repeat="halfDay in ['AM', 'PM']">{{halfDay}}</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<div class="order-prepare-num">
+					Numero de personas<br>
+					<select ng-model="selectedNum" ng-change="onChangeNum($event)">
+						<option ng-repeat="num in nums track by $index">{{$index + 1}} Personas</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="order-prepare-join-check">
+				<div class="col col-33 col-offset-33 cion cion-table"></div>
+				<div class="order-prepare-join-code-text">Enter Order Code</div>
+				<input type="text" class="col col-80 col-offset-10 order-prepare-join-code" value="12345"></input>
+			</div>
+
+			<div class="order-prepare-join-found">
+				<div class="order-prepare-join-table-found">Table Found</div> <br>
+				<div class="col col-33 col-offset-33 cion cion-table"></div>
+				<br>
+				<div class="order-prepare-join-table-code">Order Code : 12345</div>
+				<br>
+				<div class="order-prepare-join-table-name">Balaji Naidu</div>
+				<div class="order-prepare-join-table-restaurant-time">Today at 12:20 PM, Morsels</div>
+				<div class="order-prepare-join-table-people-num">Table for 2</div>
+			</div>
+		</div>
+		<a ng-click="onNext(event)" class="button button-assertive button-block order-prepare-btn-next">Siguiente</a>
+	</ion-content>
+</ion-view>

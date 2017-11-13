@@ -1,0 +1,27 @@
+
+<ion-view view-title="Feedback" hide-back-button="true" >
+	<ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+    </ion-nav-buttons>
+    
+	<ion-content scroll="false" style="background-color:#eee; padding-left:0.4em; padding-right:0.4em;">
+		<div class="feedback-back">
+	  		<div class="feedback-title">Feedback Time!</div>
+	  		<div class="feedback-description">Great chance to praise or vent..</div>
+	  		<div class="row feedback-emotions">
+	  			<div class="col feedback-emotion" ng-repeat="emotion in emotions track by $index" ng-click="onEmotion($index)">
+	  				<div class="feedback-emotion-text">{{emotion.title}}</div>
+	  				<div style="background-image: url('{{emotion.src}}')" class="feedback-emotion-img"></div>
+	  				<div class="feedback-emotion-sel" ng-show="$index == mood"></div>
+	  			</div>
+	  		</div>
+
+	  		<div class="feedback-comment">
+	  			<div class="feedback-comment-text">Additional Comments?</div>
+	  			<textarea type="text" class="feedback-comment-ctrl"></textarea>
+	  		</div>
+	  		<a class="col col-80 col-offset-10 button button-assertive" style="position:absolute; bottom:0px;" ng-click="onSubmit()">Submit</a>
+  		</div>
+	</ion-content>
+</ion-view>

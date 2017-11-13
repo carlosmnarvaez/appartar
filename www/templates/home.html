@@ -1,0 +1,39 @@
+
+
+
+<ion-view view-title="¿Que estas buscando?" hide-nav-bar="false" hide-back-button="true" >
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>  
+  <ion-content>
+
+    <!-- <ion-scroll id="id-scroll-restaurants" locking="false" direction="y" style="width: 100%; height: 100%;" has-bouncing="false"> -->
+      <ion-list">
+        <ion-item style="margin: auto;text-align: center;">
+          <ion-thumbnail item-start>
+            <img src="../img/home/canchas.png" style="width: 70%;">
+          </ion-thumbnail>
+          <!-- <h1>Canchas</h1> -->
+         <button class="button button-block button-positive" ui-sref="app.restaurants" ui-sref-active="active"  menu-close>ver más</button>
+         
+  
+        </ion-item>
+        
+      </ion-list>
+
+      <ion-list>
+        <ion-item style="margin: auto;text-align: center;">
+          <ion-thumbnail item-start>
+            <img src="../img/home/barberias.png" style="width: 100%;">
+          </ion-thumbnail>
+          <!-- <h1 style="text-align: center;">Barberias</h1> -->
+          <button class="button button-block button-positive" ui-sref="app.restaurants" ui-sref-active="active"  menu-close>ver más</button>
+        </ion-item>
+        
+      </ion-list>
+    <!-- </ion-scroll> -->
+
+
+  </ion-content>
+</ion-view>

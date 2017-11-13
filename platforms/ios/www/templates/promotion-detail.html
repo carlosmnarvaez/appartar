@@ -1,0 +1,50 @@
+
+
+<ion-view view-title="Promotion" hide-back-button="false" >
+	<ion-content scroll="false" style="position:absolute; padding-left:0.4em; padding-right:0.4em; padding-top:0.4em; padding-bottom-0.4em; background-color:#eeeeee;">
+		<div class="promotion-back">
+
+			<div class="promotion-top">
+				<ion-slide-box class="promotion-t-sb" show-pager="true">
+					<ion-slide>
+						<div class="promotion-top-img" ng-style="{'background-image': 'url('+promotion.image+')'}"></div>
+					</ion-slide>
+				
+					<ion-slide>
+						<div class="promotion-top-img" ng-style="{'background-image': 'url('+promotion.image+')'}"></div>
+					</ion-slide>
+				
+					<ion-slide>
+						<div class="promotion-top-img" ng-style="{'background-image': 'url('+promotion.image+')'}"></div>
+					</ion-slide>
+				</ion-slide-box>
+
+				<div class="promotion-detail-info">
+					<div class="promotion-detail-percent">{{promotion.percent}}% OFF</div>
+					<div class="promotion-detail-title">{{promotion.title}}</div>
+				</div>
+				
+				<div class="promotion-detail-time">{{promotion.time}}</div>
+			</div>
+
+			<div style="padding-left:1em; padding-top:1.3em;">
+				<div >Redemption Period</div>
+				<div style="font-size:1.1em; line-height:2em;">29 September 2015 - 1 October 2015</div>
+			</div>
+		</div>
+
+		<div class="promotion-price">
+			<div style="font-size:0.9em; color:gray; padding:2em;">Price</div>
+			<div class="promotion-detail-price">
+				<div class="promotion-detail-price-origin">$12,00</div>
+				<div class="promotion-detail-price-off">$9.60</div>
+				<div class="promotion-detail-price-percent">{{promotion.percent}}% OFF</div>
+			</div>
+		</div>
+
+		<div class="promotion-bottom-buttons">
+			<a ng-click="viewMenu()" class="button button-calm promotion-bottom-btn-menu">View Menu</a>
+			<a ng-click="redeem()" class="button button-assertive promotion-bottom-btn-redeem">Redeem</a>
+		</div>
+	</ion-content>
+</ion-view>

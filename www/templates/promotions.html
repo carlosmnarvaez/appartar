@@ -1,0 +1,26 @@
+
+
+<ion-view view-title="Promotions" hide-back-button="true" >
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>  
+
+	<ion-content>
+
+		<!-- <ion-scroll id="id-scroll-restaurants" locking="false" direction="y" style="width: 100%; height: 100%;" has-bouncing="false"> -->
+			<div ng-repeat="item in promotions track by $index" class="promotion-item-wrapper button-smooth" ng-click="onTapItem($index)">
+				<div class="promotion-item" ng-style="{'background-image': 'url('+item.image+')'}"></div>
+				<div class="promotion-item-backdrop">
+					<div class="promotion-mark">|</div>
+					<div class="promotion-percent">{{item.percent}}% OFF</div>
+					<div class="promotion-title">{{item.title}}% OFF</div>
+					<div class="promotion-time">{{item.time}}</div>
+					<div class="promotion-distance">{{item.distance}}</div>
+				</div>
+			</div>
+		<!-- </ion-scroll> -->
+
+
+	</ion-content>
+</ion-view>

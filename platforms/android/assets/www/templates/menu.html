@@ -1,0 +1,62 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-assertive" no-tap-scroll="true">
+      
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>  
+      
+      <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-search">
+        </button>
+      </ion-nav-buttons>
+
+    </ion-nav-bar>
+    
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+
+    <ion-content class="sm-content" scroll="false">
+
+      <div class="sm-title-wrapper">
+            <i class="cion-sm-title"></i>
+            <div class="sm-title-text">Fingertipp</div>
+      </div>
+
+      <ion-list class="sm-list">
+        <ion-item menu-close ng-click="onTapItem('app.myorders')" style="{{itemStyle('app.myorders')}}">
+          <div ng-show="isCurrentScreen('app.myorders')" style="position: absolute;color: rgb(185,229,227);left: 0px;top: 0px;text-align: left;font-size: 4em;font-weight: 100;">|</div>
+          My Orders
+          <div style="position: absolute;color:rgb(185,229,227);left: 175px;top: 16px;">(28)</div>
+        </ion-item>
+        <ion-item menu-close ng-click="onTapItem('app.restaurants')" style="{{itemStyle('app.restaurants')}}">
+          <div ng-show="isCurrentScreen('app.restaurants')" style="position: absolute;color: rgb(185,229,227);left: 0px;top: 0px;text-align: left;font-size: 4em;font-weight: 100;">|</div>
+          Restaurants
+        </ion-item>
+        <ion-item menu-close ng-click="onTapItem('app.promotions')" style="{{itemStyle('app.promotions')}}">
+          <div ng-show="isCurrentScreen('app.promotions')" style="position: absolute;color: rgb(185,229,227);left: 0px;top: 0px;text-align: left;font-size: 4em;font-weight: 100;">|</div>
+          Promotions
+        </ion-item>
+        <ion-item menu-close ng-click="onTapItem('app.accounts')" style="{{itemStyle('app.accounts')}}">
+          <div ng-show="isCurrentScreen('app.accounts')" style="position: absolute;color: rgb(185,229,227);left: 0px;top: 0px;text-align: left;font-size: 4em;font-weight: 100;">|</div>
+          My Accounts
+        </ion-item>
+        <ion-item menu-close ng-click="onTapItem('app.settings')" style="{{itemStyle('app.settings')}}">
+          <div ng-show="isCurrentScreen('app.settings')" style="position: absolute;color: rgb(185,229,227);left: 0px;top: 0px;text-align: left;font-size: 4em;font-weight: 100;">|</div>
+          Settings
+        </ion-item>
+      </ion-list>
+
+      <div class="sm-logout-wrapper" ng-click="onTapItem('app.logout')">
+            <i class="cion-sm-logout" style="padding-top:0.7em; padding-left:5em;"></i>
+            <div class="sm-logout-text">Log Out</div>
+      </div>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

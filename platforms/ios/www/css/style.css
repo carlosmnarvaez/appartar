@@ -1,0 +1,1033 @@
+
+.hc-backdrop{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.button-menu{
+	padding: 0px 0px 0px 0em;
+	float: left;
+	padding: .1em 0px 0px;
+	margin-left: .1em;
+	width: .8em;
+	font-size: 2.5em;
+}
+
+.button-smooth.activated{
+	opacity: .8;
+}
+
+/* Side Screen - Fingertipp */
+
+.sm-content{
+	background-color: rgb(29, 29, 29);
+}
+
+.sm-title-wrapper{
+	position: absolute;
+	height: 7em;
+	width: 100%;
+	padding-left: 5em;
+	padding-top: 2em;
+	border-bottom:thin solid black;
+}
+
+.sm-title-text{
+	position: absolute;
+	text-align: left;
+	color: rgb(246, 116, 116);
+	font-weight: 700;
+	font-size: 1.3em;
+	top: 2em;
+	left: 6em;
+}
+
+.sm-logout-wrapper{
+	position: absolute;
+	background-color: black;
+	height: 4em;
+	width: 100%;
+	bottom: 0px;
+}
+
+.sm-logout-text{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	color: #BBB;
+	font-weight: 400;
+	font-size: 1.3em;
+	padding-left: 1em;
+	top: 1em;
+}
+
+.sm-list {
+	position: absolute;
+	padding-top: 10em;
+	width: 100%;
+}
+
+.sm-list .item {
+	background-color: transparent;
+	border: none;
+	width: 100%;
+	color: #BBB;
+}
+
+.sm-list .item-content{
+	background-color: transparent;
+	text-align: left;
+	font-size: 1.2em;
+	padding-left: 4em;
+}
+
+.sm-list .item-content.activated,
+.sm-list .item.activated{
+	background-color: black;
+}
+
+/* Splash Screen */
+.splash-logo{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	/*background-color: pink;*/
+	background-image: url('../img/logo.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+/* Screen 1 - Restaurant */
+
+.restaurant-item-wrapper, .promotion-item-wrapper{
+	position: relative;
+	padding-top : 1px;
+}
+
+.restaurant-item, .promotion-item{
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	color: white;
+	height: 13em;
+}
+
+.restaurant-item-backdrop, .promotion-item-backdrop{
+	position: absolute;
+	color: white;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+}
+
+.restaurant-mark{
+	position: absolute;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 6em;
+	height: 4em;
+	top: 3em;
+	left: 2em;
+}
+
+.restaurant-title{
+	position: absolute;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-weight: 500;
+	font-size: 1.3em;
+	left: 1.5em;
+	top: 6em;
+}
+
+.restaurant-info{
+	position: absolute;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 1em;
+	left: 2em;
+	top: 9em;
+}
+
+.restaurant-memo{
+	font-size: 1em;
+	text-align: right;
+	white-space: nowrap;
+	line-height: 1em;
+	padding-right: 1em;
+	padding-top: 1em;
+	overflow: hidden;
+}
+
+.restaurant-contact{
+	float: right;
+	margin-top: 8.5em;
+	margin-right: 1.2em;
+	width: 1.5em;
+	padding: 0px .2em;
+	border-radius: .2em;
+}
+
+
+
+/* Screen 2 - Promotion */
+
+.promotion-mark{
+	position: absolute;
+	white-space: nowrap;
+	font-size: 3.3em;
+	font-weight: 100;
+	left: 0.2em;
+	top: 1em;
+}
+
+.promotion-percent{
+	position: absolute;
+	white-space: nowrap;
+	font-size: 2em;
+	left: 0.9em;
+	top: 1.5em;
+}
+
+.promotion-title{
+	position: absolute;
+	white-space: nowrap;
+	font-size: 1em;
+	left: 2em;
+	top: 4.8em;
+}
+
+.promotion-time{
+	position: absolute;
+	white-space: nowrap;
+	font-size: 1em;
+	padding-top: 10.5em;
+	padding-left: 2em;
+	text-align: left;
+}
+
+.promotion-distance{
+	position: relative;
+	white-space: nowrap;
+	font-size: 1em;
+	padding-top: 10.5em;
+	padding-right: 2em;
+	text-align: right;
+}
+
+
+
+/* Screen 4 - Restaurant Detail */
+
+.restaurant-top{
+	position: relative;
+	width: 100%;
+	height: 34%;
+	padding-top: 0px;
+	margin-top: 0px;
+}
+
+.t-sb{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.t-sb .slider-pager{
+	position: absolute;
+	top: 13px;
+	right: 0px;
+	z-index: 1;
+	width: 24%;
+	height: 15px;
+	font-size: .5em;
+	text-align: center;
+}
+
+.t-sb .slider-pager .slider-pager-page{
+	margin: 0px 4px;
+	width: 6px;
+	height: 6px;
+	border-radius: 5px;
+}
+
+.t-sb .slider-pager .slider-pager-page i{
+	display: none;
+}
+
+.t-sb .slider-pager-page{
+	background-color: white;
+	border: 1px solid white;
+	opacity: 1;
+}
+
+.t-sb .slider-pager-page.active{
+	background-color: red;
+	border: 1px solid white;
+}
+
+.restaurant-top-img{
+	position: absolute;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+}
+
+.restaurant-top-title{
+	position: absolute;
+	white-space: nowrap;
+	bottom: 4.5em;
+	left: 0.5em;
+	font-weight: 500;
+	font-size: 1.2em;
+	text-align: left;
+	color: white;
+}
+
+.restaurant-top-info{
+	position: absolute;
+	white-space: nowrap;
+	bottom: 4em;
+	left: 0.6em;
+	font-weight: normal;
+	font-size: 1em;
+	text-align: left;
+	color: white;
+}
+
+.restaurant-top-call{
+	position: absolute;
+	width: 34px;
+	height: 34px;
+	bottom: 58px;
+	right: 60px;
+}
+
+.restaurant-top-call-text{
+	position: absolute;
+	left: 35px;
+	bottom: 7px;
+	color: rgb(122,177,173);
+	font-size: 1.2em;
+	font-weight: 600;
+}
+
+.restaurant-top-pin{
+	position: absolute;
+	width: 34px;
+	height: 34px;
+	bottom: 5px;
+	left: 20px;
+}
+
+.restaurant-top-address{
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	bottom: 0px;
+	background-color: black;
+	opacity: .5;
+}
+
+.restaurant-top-address-text{
+	position: absolute;
+	bottom: 5px;
+	left: 60px;
+	padding-right: 60px;
+	width: 100%;
+	font-size: 0.9em;
+	text-align: left;
+	opacity: 1;
+	color: white;	
+}
+
+
+.restaurant-bottom{
+	position: absolute;
+	width: 100%;
+	height: 66%;
+}
+
+.b-sb{
+	position: absolute;
+	width: 100%;
+	height: 80%;
+	top: 0px;
+	font-size: 1em;
+}
+
+.b-sb .slider-pager{
+	position: absolute;
+	top: 0em;
+	left: 0px;
+	z-index: 1;
+	font-size: 1em;
+}
+
+.b-sb .slider-pager .slider-pager-page{
+	margin: 0px 0px;
+	width: 50%;
+	height: 2.6em;
+	font-size: 1em;
+}
+
+.b-sb .slider-pager-page > i{
+	display: none;
+}
+
+.b-sb .slider-pager-page{
+	background-color: transparent;
+}
+
+.b-sb .slider-pager-page.active{
+	border-bottom: red solid 2px;
+}
+
+.restaurant-bottom-tabs{
+	position: absolute;
+	border-bottom: 3px solid #CCC;
+	width: 100%;
+	height: 2.8em;
+	font-size: 1em;
+}
+
+.restaurant-bottom-tab-description {
+	position: absolute;
+	width: 50%;
+	top: 0.7em;
+	text-align: center;
+	color: #555;
+}
+
+.restaurant-bottom-tab-outlet {
+	position: absolute;
+	width: 50%;
+	top: 0.7em;
+	right: 0em;
+	text-align: center;
+	color: #555;
+}
+
+.restaurant-bottom-text {
+	position: absolute;
+	color: #666;
+	width: 100%;
+	height: 100%;
+	padding-left: 1em;
+	padding-right: 1em;
+	text-align: justify;
+	top: 15%;
+}
+
+.restaurant-bottom-buttons {
+	position: absolute;
+	top: 80%;
+	width: 100%;
+	height: 20%;
+	vertical-align: center;
+}
+
+.restaurant-bottom-btn-menu {
+	position: absolute;
+	width: 40%;
+	left: 6%;
+}
+
+.restaurant-bottom-btn-order {
+	position: absolute;
+	width: 40%;
+	right: 6%;
+}
+
+
+
+
+
+/* Screen 5 - Order Prepare */
+
+.order-prepare-back{
+	position: absolute;
+	padding-left: 1em;
+	padding-right: 1em;
+	width: 100%;
+	height: 100%;
+	background-color: #ddd;
+}
+
+.order-prepare-top{
+	position: relative;
+	width: 100%;
+	height: 80%;
+}
+
+.order-prepare-type{
+	position: relative;
+	margin-top: 1em;
+	font-size: 1em;
+}
+
+.order-prepare-btn-next{
+	position: relative;
+	width: 80%;
+	font-size: 1em;
+	left: 10%;
+}
+
+.order-prepare-date-time-num{
+	position: relative;
+	width: 100%;
+	height: 15em;
+	font-size: 1em;
+	color: #666;
+}
+
+.order-prepare-date, .order-prepare-time, .order-prepare-num{
+	position: relative;
+	height: 4em;
+	font-size: 1em;
+}
+
+.order-prepare-date-content > div > select,
+.order-prepare-time-content > div > select{
+	position: absolute;
+	top: 0.6em;
+	background-color: transparent;
+	border: none;
+	border-bottom: 0.1em solid #bbb;
+	width: 25%;
+	height: 2em;
+	font-size: 1.5em;
+	color: #666;
+}
+
+.order-prepare-num > select{
+	top: 0.6em;
+	background-color: transparent;
+	border: none;
+	border-bottom: 0.1em solid #bbb;
+	width: 100%;
+	height: 2em;
+	font-size: 1.5em;
+	color: #666;
+}
+
+.order-prepare-join-check{
+	position: absolute;
+	top: 15em;
+	font-size: 1em;
+	width: 100%;
+	vertical-align: middle;
+}
+
+.order-prepare-join-code{
+	text-align: center;
+}
+
+.order-prepare-join-code-text{
+	text-align: center;
+	font-size: 1.2em;
+	line-height: 4em;
+}
+
+.order-prepare-join-found{
+	position: absolute;
+	top: 15em;
+	font-size: 1em;
+	width: 100%;
+	vertical-align: middle;
+}
+
+.order-prepare-join-table-found{
+	font-size: 1.3em;
+	font-weight: 600;
+	text-align: center;
+}
+
+.order-prepare-join-found > div{
+	text-align: center;
+}
+
+.order-prepare-join-table-name{
+	font-weight: 600;
+	font-size: 1.2em;
+
+}
+
+/* Screen 6 - Order Menu */
+.order-menu-back{
+	vertical-align: middle;
+	background-color: #eee;
+}
+
+.order-menu-tabs{
+	position: relative;
+	height: 3.5em;
+	font-size: 1.2em;
+	text-align: center;
+	border: transparent;
+}
+
+.order-menu-tab{
+	position: relative;
+	background-color: white;
+}
+
+.order-menu-tab .button{
+	border-bottom: 2px solid red !important;
+}
+
+.order-menu-tab .button.active{
+	border-bottom: 2px solid transparent !important;
+}
+
+.order-menu-content{
+	position: relative;
+	height: 75%;
+	margin-top: 1em;
+	margin-right: 1em;
+	margin-left: 1em;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.order-menu-item-dish{
+	/*position: relative;*/
+	border: 0px transparent;
+	border-top: 1px solid #eee;
+	font-size: 1em;
+	font-weight: 500;
+	padding-bottom: 0em;
+	/*padding-top: 0em;*/
+}
+
+.item.item-accordion {
+	padding: 2em;
+	padding-top: 0.1em;
+	padding-bottom: 0.1em;
+	white-space: pre-line;
+	text-align: justify;
+	font-size: 1em;
+	border: transparent;
+}
+
+.order-menu-btn-next{
+	position: relative;
+	margin-top: 1em;
+	width: 80%;
+	font-size: 1em;
+	left: 10%;
+}
+
+
+/* Screen 7 - Confirm Order */
+
+.order-confirm-restaurant{
+	position: relative;
+	width: 100%;
+	height: 3.8em;
+	padding-left: 1em;
+	padding-top: .5em;
+	font-size: 1.1em;
+	font-weight: 500;
+	background-color: #dddddd;
+}
+
+.order-confirm-content{
+	position: relative;
+	width: 100%;
+	height: 50%;
+	background-color: white;
+	margin-bottom: 0px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.order-confirm-satistics{
+	position: relative;
+	width: 100%;
+	height: 20%;
+	font-size: 1.1em;
+	background-color: #dddddd;
+}
+
+.order-confirm-statistics-total{
+	border-top:1px solid #bbb;
+	font-size: 1.3em;
+	font-weight: 600;
+}
+
+
+/* Screen 8 - Pay */
+
+.order-pay-success, .order-pay-failure{
+	position: relative;
+	margin-top: 2%;
+	width: 100%;
+	height: 97%;
+	text-align: center;
+	background-color: white;
+}
+
+.order-pay-success-hurrah{
+	position: absolute;
+	font-size: 1.5em;
+	width: 100%;
+	top: 10%;
+}
+
+.order-pay-success-img{
+	position: absolute;
+	width: 100%;
+	height: 30%;
+	background-image: url('../img/icon/mood-great.png');
+	background-size: 30%;
+	background-repeat: no-repeat;
+	background-position: center;
+	top: 15%;
+}
+
+.order-pay-success-info{
+	position: absolute;
+	width: 100%;
+	font-size: 1em;
+	color: gray;
+	top: 45%;
+}
+
+.order-pay-success-code-text{
+	position: absolute;
+	width: 100%;
+	font-size: 1em;
+	color: gray;
+	top: 65%;
+}
+
+.order-pay-success-code{
+	position: absolute;
+	width: 100%;
+	font-size: 2em;
+	font-weight: 600;
+	top: 75%;
+}
+
+.order-pay-failure-hurrah{
+	position: absolute;
+	font-size: 1.5em;
+	width: 100%;
+	top: 10%;
+}
+
+.order-pay-failure-img{
+	position: absolute;
+	width: 100%;
+	height: 30%;
+	background-image: url('../img/icon/mood-bad.png');
+	background-size: 30%;
+	background-repeat: no-repeat;
+	background-position: center;
+	top: 15%;
+}
+
+.order-pay-failure-reason{
+	position: absolute;
+	width: 100%;
+	font-size: 1em;
+	top: 45%;
+}
+
+.order-pay-failure-info{
+	position: absolute;
+	width: 100%;
+	font-size: 1em;
+	color: gray;
+	top: 50%;
+}
+
+.order-pay-failure-try{
+	position: absolute;
+	width: 100%;
+	font-size: 1.2em;
+	font-weight: 600;
+	top: 80%;
+}
+
+/* Screen 13 - Feedback */
+
+.feedback-back{
+	position: relative;
+	margin-top: 2%;
+	width: 100%;
+	height: 97%;
+	text-align: center;
+	background-color: white;
+}
+
+.feedback-title{
+	position: absolute;
+	width: 100%;
+	font-size: 1.3em;
+	top: 5%;
+}
+
+.feedback-description{
+	position: absolute;
+	width: 100%;
+	font-size: 1em;
+	top: 13%;
+}
+
+.feedback-emotions{
+	position: absolute;
+	width: 100%;
+	height: 20%;
+	top: 25%;
+}
+
+.feedback-emotion{
+	/*background-color: blue;*/
+	font-size: 1em;
+	width: 100%;
+	height: 100%;
+	overflow: block;
+}
+
+.feedback-emotion-img{
+	position: absolute;
+	width: 20%;
+	height: 80%;
+	/*background-size: 20%;*/
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.feedback-emotion-sel{
+	position: absolute;
+	width: 10%;
+	height: 2%;
+	background-color: red;
+	margin-left: 5%;
+	top: 85%;
+}
+
+.feedback-comment{
+	position: absolute;
+	padding-left: 10%;
+	width: 100%;
+	height: 50%;
+	font-size: 1em;
+	text-align: left;
+	top: 50%;
+}
+
+.feedback-comment-ctrl{
+	position: absolute;
+	border: 1px solid #dddddd !important;
+	padding-left: 1%;
+	width: 80%;
+	height: 50%;
+	font-size: 1em;
+	text-align: left;
+	background-color: #eeeeee;
+	color: gray;
+	resize: none;
+	/*top: 55%;*/
+}
+
+/* Screen 8 - Promotion-detail */
+
+
+.promotion-t-sb{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.promotion-t-sb .slider-pager{
+	position: absolute;
+	bottom: 13px;
+	right: 0px;
+	z-index: 1;
+	width: 24%;
+	height: 15px;
+	font-size: .5em;
+	text-align: center;
+}
+
+.promotion-t-sb .slider-pager .slider-pager-page{
+	margin: 0px 4px;
+	width: 6px;
+	height: 6px;
+	border-radius: 5px;
+}
+
+.promotion-t-sb .slider-pager .slider-pager-page i{
+	display: none;
+}
+
+.promotion-t-sb .slider-pager-page{
+	background-color: white;
+	border: 1px solid white;
+	opacity: 1;
+}
+
+.promotion-t-sb .slider-pager-page.active{
+	background-color: red;
+	border: 1px solid white;
+}
+
+.promotion-back{
+	position: relative;
+	background-color: white;
+	width: 100%;
+	height: 55%;
+}
+
+.promotion-top{
+	position: relative;
+	width: 100%;
+	height: 75%;
+}
+
+.promotion-top-img{
+	position: absolute;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+}
+
+.promotion-detail-time{
+	position: absolute;
+	z-index: 1;
+	color: white;
+	right: 1em;
+	top: 1em;
+}
+
+.promotion-detail-info{
+	position: absolute;
+	z-index: 1;
+	color: white;
+	bottom: 1em;
+	left: 1em;
+	padding-left: 1em;
+	border-left: 1px solid white;
+}
+
+.promotion-detail-percent{
+	font-size: 2.5em;
+	font-weight: 600;
+	line-height: 1em;
+}
+
+.position-detail-title{
+	font-size: 1em;
+}
+
+.promotion-price{
+	position: relative;
+	width: 100%;
+	height: 25%;
+	margin-top: .5em;
+	background-color: white;
+}
+
+.promotion-detail-price{
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	bottom: 15%;
+}
+
+.promotion-detail-price-origin{
+	position: absolute;
+	left: 0px;
+	top: 0em;
+	width: 50%;
+	text-align: right;
+	padding-right: 0.2em;
+	color: red;
+	font-size: 3em;
+	line-height: 2em;
+	text-decoration: line-through;
+}
+
+.promotion-detail-price-off{
+	position: absolute;
+	right: 0px;
+	top: 0em;
+	width: 50%;
+	text-align: left;
+	padding-left: 0.3em;
+	font-size: 3em;
+	line-height: 2em;
+	border-left: 1px solid gray;
+	/*background-color: blue;*/
+}
+
+.promotion-detail-price-percent{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	color: red;
+}
+
+.promotion-bottom-buttons {
+	position: relative;
+	padding-top: 10%;
+	width: 100%;
+}
+
+.promotion-bottom-btn-menu {
+	position: absolute;
+	width: 40%;
+	left: 6%;
+}
+
+.promotion-bottom-btn-redeem {
+	position: absolute;
+	width: 40%;
+	right: 6%;
+}
+
+/* Screen 10 - My Orders */
+
+.myorders-content{
+	position: absolute;
+	left: 2%;
+	top: 2%;
+	width: 96%;
+	height: 96%;
+	padding: 0px;
+	margin: 0px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.orders-promotion-title{
+	position: relative;
+	padding-top: 0em;
+	width: 100%;
+	text-align: center;
+	color: rgb(255, 130, 3);
+	font-size: 1.3em;
+	line-height: 2em;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+
+
+<ion-view view-title="My Orders" hide-back-button="true" >
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>  
+	<ion-content scroll="false" style="padding:0.4em; background-color:#eeeeee">
+	  	<div style="width:100%; height:100%; background-color:white;">
+	  		<div class="card myorders-content" scroll="false">
+		  		<div class="item" ng-click="">
+		  			<div class="orders-promotion-title">
+		  				<i class="cion-redeem"></i>
+		  				Redeem Promotions		  				
+		  			</div>
+		  			<div style="color:gray; text-align:center; font-size:0.8em;">4 Days Left</div>
+		  		</div>
+		  		<div ng-repeat="order in myorders track by $index" class="item">
+		  			<div style="text-align:center; font-weight:600; line-height:3em;">
+		  				{{restaurants[order.restaurant].title}} at {{order.time}}
+		  			</div>
+		  			<div style="text-align:center; font-size:0.8em; color:gray;">
+		  				Code : {{order.code}}
+		  			</div>
+		  			<div class="button button-block button-small button-balanced">
+		  				Slight Delay?
+		  			</div>
+		  		</div>
+	  		</div>
+	  	</div>
+	</ion-content>
+</ion-view>

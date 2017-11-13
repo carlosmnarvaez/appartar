@@ -1,0 +1,59 @@
+
+
+<ion-view view-title="Detalle Canchas" hide-back-button="false" >
+	<ion-content scroll="false">
+
+		<div class="restaurant-top">
+			<ion-slide-box class="t-sb" show-pager="true">
+				<ion-slide>
+					<div class="restaurant-top-img" ng-style="{'background-image': 'url('+restaurant.image+')'}"></div>
+				</ion-slide>
+			
+				<ion-slide>
+					<div class="restaurant-top-img" ng-style="{'background-image': 'url('+restaurant.image2+')'}"></div>
+				</ion-slide>
+			
+				<ion-slide>
+					<div class="restaurant-top-img" ng-style="{'background-image': 'url('+restaurant.image3+')'}"></div>
+				</ion-slide>
+			</ion-slide-box>
+			<div class="restaurant-top-title">{{restaurant.title}}</div>
+			<div class="restaurant-top-info">{{restaurant.info}}</div>
+			<div class="restaurant-top-call">
+				<i class="cion cion-call"></i>
+				<div class="restaurant-top-call-text">CALL</div>
+			</div>
+			<div class="restaurant-top-address"></div>
+			<div class="restaurant-top-pin">
+				<i class="cion cion-address"></i>
+			</div>
+			<div class="restaurant-top-address-text">{{restaurant.address}}</div>
+		</div>
+
+		<div class="restaurant-bottom"	scroll="false">
+			<div class="restaurant-bottom-tabs">
+				<div class="restaurant-bottom-tab-description">Description</div>
+				<div class="restaurant-bottom-tab-outlet">Outlet</div>
+			</div>
+
+			<ion-slide-box class="b-sb" show-pager="true">
+				<ion-slide>
+					<div class="restaurant-bottom-text">
+						{{restaurant.description}}
+					</div>
+				</ion-slide>
+				
+				<ion-slide>
+					<div class="restaurant-bottom-text">
+						{{restaurant.outlet}}
+					</div>
+				</ion-slide>
+			</ion-slide-box>
+
+			<div class="restaurant-bottom-buttons">
+				<a ui-sref="app.restaurants" class="button button-calm restaurant-bottom-btn-menu">Volver atras</a>
+				<a ng-click="order()" class="button button-assertive restaurant-bottom-btn-order">Siguiente</a>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

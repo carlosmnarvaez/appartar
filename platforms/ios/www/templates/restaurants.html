@@ -1,0 +1,27 @@
+
+
+<ion-view view-title="Restaurants" hide-nav-bar="false" hide-back-button="true" >
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>  
+	<ion-content>
+
+		<!-- <ion-scroll id="id-scroll-restaurants" locking="false" direction="y" style="width: 100%; height: 100%;" has-bouncing="false"> -->
+			<div ng-repeat="item in restaurants track by $index" class="restaurant-item-wrapper button-smooth" ng-click="onTapItem($index)">
+				<div class="restaurant-item" ng-style="{'background-image': 'url('+item.image+')'}"></div>
+				<div class="restaurant-item-backdrop">
+					<div class="restaurant-memo">{{getMemo(item.option)}}</div>
+					<div class="restaurant-mark" ng-style="{'background-image': 'url('+item.mark+')'}"></div>
+					<div class="restaurant-title">{{item.title}}</div>
+					<div class="restaurant-info">{{item.info}}</div>
+					<div class="restaurant-contact button-smooth">
+						<i class="cion cion-contact"></i>
+					</div>
+				</div>
+			</div>
+		<!-- </ion-scroll> -->
+
+
+	</ion-content>
+</ion-view>

@@ -1,0 +1,42 @@
+
+
+<ion-view view-title="Your Order" hide-back-button="false" >
+	<ion-content scroll="false" style="background-color:#eee; padding:0.4em;">
+	  	<div class="order-confirm-restaurant">
+	  		{{user_time}}<br />{{table_restaurant}}
+	  	</div>
+	  	<div class="list order-confirm-content">
+	  		<div class="item" ng-repeat="order in orderedDishes track by $index">
+	  			<i class="cion ion-minus-circled assertive" ng-click="confirmDelete($index)" style="font-size:1.5em;"></i>
+	  			{{order.dish.name}}
+	  			<span class="item-note">
+	  				<button ng-click="onClickMin($index)" ng-class="getButtonMin({{order.group}}, {{order.index}})">
+						<i class="icon ion-chevron-left"></i>
+					</button>
+					{{orderedDishesNum[order.group][order.index]}}
+					<button ng-click="onClickPlus($index)" class="button button-small button-clear button-positive" style="border-color: #ffffff!important;background-color: #ffffff!important;color: #dddddd!important;">
+						<i class="icon ion-chevron-right"></i>
+					</button>
+	  				${{getPriceString(order.dish.price * orderedDishesNum[order.group][order.index])}}
+	  			</span>
+	  		</div>
+	  	</div>
+	  	<div class="order-confirm-satistics">
+	  		<div class="row">
+	  			<div class="col col-66">Order:</div>
+	  			<div class="col col-33" style="text-align:right">${{getPriceString(orderedPrice)}}</div>
+	  		</div>
+	  		<div class="row" style="font-size: 0.8em; opacity: .7;">
+	  			<!-- <div class="col col-66">GST 7%</div> -->
+	  			<!-- <div class="col col-33" style="text-align:right">${{getPriceString(gstPrice)}}</div> -->
+	  		</div>
+	  		<div></div>
+	  		<div class="row order-confirm-statistics-total">
+	  			<div class="col col-66">Total:</div>
+	  			<div class="col col-33" style="text-align:right">${{getPriceString(totalPrice)}}</div>
+	  		</div>
+	  	</div>
+		<!-- <a class="col col-80 col-offset-10 button button-small button-positive" style="margin-top:1em;">Add Note</a> -->
+		<a ng-click="onPay()" class="col col-80 col-offset-10 button button-small button-assertive" style="margin-top:1em;">Reservar</a>		
+	</ion-content>
+</ion-view>
